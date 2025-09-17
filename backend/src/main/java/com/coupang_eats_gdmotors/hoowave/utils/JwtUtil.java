@@ -14,7 +14,8 @@ import java.util.Date;
 public class JwtUtil {
     private final SecretKey secretKey;
 
-    private static final long EXPIRATION_TIME = 3600 * 1000L;
+//    private static final long EXPIRATION_TIME = 3600 * 1000L;
+    private static final long EXPIRATION_TIME = 10 * 1000L;
 
     public JwtUtil(@Value("${config.jwt-secret-key}") String secretKey) {
         if (secretKey == null || secretKey.isEmpty()) {
